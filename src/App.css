@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 80px;
+  color: white;
+  background-color: #a308a3;background: rgb(138,12,179);
+background: linear-gradient(90deg, rgba(138,12,179,1) 1%, rgba(214,13,214,0.938813025210084) 86%, rgba(214,13,214,0.938813025210084) 96%, rgba(210,179,210,1) 100%);background: rgb(138,12,179);
+background: linear-gradient(90deg, rgba(138,12,179,1) 0%, rgba(185,12,186,1) 100%, rgba(214,13,214,0.938813025210084) 100%, rgba(214,13,214,0.938813025210084) 100%, rgba(210,179,210,1) 100%);
+}
+
+.left-header, .right-header{
+  margin: 2%;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left-header{
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.logo{
+  height: 100%;
+  margin-right: 6px;
+}
+
+/* .form{
+  display: grid;
+  grid-template: 40px / auto auto
+} */
+
+.fword {
+  grid-area: input1;
+  height: 40px;
+  margin: 4%;
+  border-radius: 8px;
+  border: 2px solid rgb(204, 201, 201, 0.5);
+  padding: 10px;
+}
+
+.lword{
+  grid-area: input2;
+  height: 40px;
+  margin: 4%;
+  border-radius: 8px;
+  border: 2px solid rgb(204, 201, 201, 0.5);
+  padding: 10px;
+}
+
+.submit{
+  grid-area: button;
+  color: white;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+  height: 40px;
+  margin: 2%;
+  border-radius: 8px;
+  border: none;
+  background-color: #a308a3;background: rgb(138,12,179);
+background: linear-gradient(90deg, rgba(138,12,179,1) 1%, rgba(214,13,214,0.938813025210084) 86%, rgba(214,13,214,0.938813025210084) 96%, rgba(210,179,210,1) 100%);background: rgb(138,12,179);
+background: linear-gradient(90deg, rgba(138,12,179,1) 0%, rgba(185,12,186,1) 100%, rgba(214,13,214,0.938813025210084) 100%, rgba(214,13,214,0.938813025210084) 100%, rgba(210,179,210,1) 100%);
+}
+
+.form {
+  display: grid;
+  grid-template:
+  'input1 input2'
+  'button button';
+  grid-gap: 10px;
+  padding: 10px;
+  margin-left: inherit;
+  margin-right: inherit;
+  margin: 3% 5% 3% 5%;
+  border: 1px solid red;
+}
+
+.meme-image{
+  border-radius: 5px;
+  max-width: 100%;
+  top: 50%;
+  left: 25%;
+  position: relative;
+}
+
+.meme-text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.top{
+  top: 0;
+}
+
+.bottom{
+  bottom:0;
+}
+
+.meme {
+  position: relative;
 }
